@@ -26,7 +26,7 @@ import bank.account.api.tools.JsonResponseModelImpl;
 public class DepositRestController extends BaseRestController { 
     
     @RequestMapping(value="accounts/{id}/deposit", method = RequestMethod.POST)
-    public @ResponseBody JsonResponseModelImpl makeDeposit(@RequestBody TransactionInput transaction,
+    public @ResponseBody JsonResponseModelImpl doDeposit(@RequestBody TransactionInput transaction,
     		@PathVariable(name = "id",required = true) Long accountId) {
         
     	JsonResponseModelImpl jsonResponse = new JsonResponseModelImpl();
